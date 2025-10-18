@@ -49,20 +49,4 @@ This dataset is ideal for learning RNA-seq analysis because it is small, well-an
 
 ---
 
-## 📂 Repository Structure
-rna-seq-diffexp-airway/
-├─ README.md
-├─ data/
-├─ results/
-│ ├─ figures/
-│ └─ deg_table.csv
-├─ scripts/
-│ ├─ 01_setup.R
-│ ├─ 02_load_data.R
-│ ├─ 03_qc.R
-│ ├─ 04_deseq2.R
-│ ├─ 05_plots.R
-│ └─ 06_annotation.R
-└─ report/
-└─ report.qmd
 
