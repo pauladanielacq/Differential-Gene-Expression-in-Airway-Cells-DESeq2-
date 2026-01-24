@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 RNA-seq Differential Expression Analysis — Airway × Dexamethasone
 
 This project performs a small-scale RNA-seq differential expression analysis using the public airway dataset from Bioconductor.
