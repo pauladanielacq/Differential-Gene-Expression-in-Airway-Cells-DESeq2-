@@ -5,19 +5,19 @@ The goal is to identify genes whose expression changes significantly when human 
 
 🎯 Objectives
 
-Explore transcriptional changes induced by dexamethasone treatment.
+-Explore transcriptional changes induced by dexamethasone treatment.
 
-Apply a reproducible RNA-seq analysis workflow using DESeq2.
+-Apply a reproducible RNA-seq analysis workflow using DESeq2.
 
-Produce publication-grade visualizations:
+-Produce publication-grade visualizations:
 
-PCA
+-PCA
 
-Volcano plot
+-Volcano plot
 
-Heatmap
+-Heatmap
 
-Demonstrate skills in RNA-seq statistics, visualization and interpretation.
+-Demonstrate skills in RNA-seq statistics, visualization and interpretation.
 
 📚 Dataset
 
@@ -25,49 +25,49 @@ The analysis uses the airway dataset from Bioconductor.
 
 It contains RNA-seq read counts from primary human airway smooth muscle cells, cultured under two conditions:
 
-Control (No dexamethasone)
+-Control (No dexamethasone)
 
-Dexamethasone-treated
+-Dexamethasone-treated
 
 This dataset is widely used for education and benchmarking: small, well-annotated, and fully reproducible.
 
 🧩 Workflow Overview
 
-Load raw count matrix and metadata.
+1. Load raw count matrix and metadata.
 
-Quality checks and filtering.
+2. Quality checks and filtering.
 
-Normalization using DESeq2 size factors.
+3. Normalization using DESeq2 size factors.
 
-Variance Stabilizing Transform (VST).
+4. Variance Stabilizing Transform (VST).
 
-Dimensionality reduction using PCA.
+5. Dimensionality reduction using PCA.
 
-Differential expression analysis (DEX):
+6. Differential expression analysis (DEX):
 
-Model design: ~ dex
+- Model design: ~ dex
 
-Shrinkage estimation with apeglm.
+- Shrinkage estimation with apeglm.
 
 Biological interpretation:
 
-Volcano plot
+- Volcano plot
 
-Heatmap of top DE genes
+- Heatmap of top DE genes
 
-Gene annotation using org.Hs.eg.db
+- Gene annotation using org.Hs.eg.db
 
-Export results & figures.
+- Export results & figures.
 
 🧰 Tools & Libraries
 
-R / Bioconductor
+- R / Bioconductor
 
-DESeq2, airway, apeglm, SummarizedExperiment
+- DESeq2, airway, apeglm, SummarizedExperiment
 
-tidyverse, ggplot2, pheatmap
+- tidyverse, ggplot2, pheatmap
 
-AnnotationDbi, org.Hs.eg.db
+- AnnotationDbi, org.Hs.eg.db
 
 Reproducibility
 
@@ -94,25 +94,21 @@ Quarto / R Markdown for literate analysis
 
 Figures are saved under results/figures/:
 
-pca.png → sample clustering by treatment
+- pca.png → sample clustering by treatment
 
-volcano.png → significance vs fold change
+- volcano.png → significance vs fold change
 
-heatmap.png → top 30 DE genes
+- heatmap.png → top 30 DE genes
 
 🧬 Summary of Biological Findings
 
-(Aquí puedes agregar una síntesis interpretativa — súper importante para reclutadores y portafolio en bioinformática)
+- Dexamethasone treatment altered expression of inflammatory response genes.
 
-For example:
+- Several glucocorticoid-responsive genes were significantly downregulated.
 
-Dexamethasone treatment altered expression of inflammatory response genes.
+- PCA shows clear separation between control vs treated samples.
 
-Several glucocorticoid-responsive genes were significantly downregulated.
-
-PCA shows clear separation between control vs treated samples.
-
-Volcano and heatmap highlight transcriptional repression patterns consistent with glucocorticoid signaling.
+- Volcano and heatmap highlight transcriptional repression patterns consistent with glucocorticoid signaling.
 
 ▶️ Running the Analysis
 
@@ -140,15 +136,15 @@ results/figures/ → all plots as .png
 
 Possible improvements:
 
-GO / KEGG enrichment analysis (clusterProfiler)
+- GO / KEGG enrichment analysis (clusterProfiler)
 
-Pathway visualization
+- Pathway visualization
 
-LFC shrinkage method comparison
+- LFC shrinkage method comparison
 
-Export to GEO2R-compatible tables
+- Export to GEO2R-compatible tables
 
-Convert to Snakemake pipeline
+- Convert to Snakemake pipeline
 
 
 🙌 Credits
@@ -156,56 +152,4 @@ Convert to Snakemake pipeline
 Dataset: Himes et al., Bioconductor airway package
 Analysis: Paula Cano Quintero
 =======
-# Differential-Gene-Expression-in-Airway-Cells-DESeq2-
 
-This project performs a small-scale **RNA-seq differential expression analysis** using the public **`airway` dataset** from Bioconductor.  
-The goal is to identify **genes whose expression changes significantly** when human airway epithelial cells are treated with **dexamethasone**, a synthetic glucocorticoid commonly used for its **anti-inflammatory** effects in conditions such as asthma and chronic respiratory diseases.
-
----
-
-## 🎯 Objectives
-- Explore transcriptional changes induced by dexamethasone treatment.  
-- Apply a complete RNA-seq analysis workflow using **DESeq2**.  
-- Produce reproducible visualizations: **PCA**, **volcano plot**, and **heatmap**.  
-- Demonstrate skills in bioinformatics data analysis and result interpretation.
-
----
-
-## 📚 Dataset
-The analysis uses the [**`airway` dataset**](https://bioconductor.org/packages/release/data/experiment/html/airway.html) from Bioconductor.  
-It contains RNA-seq read counts for human airway smooth muscle cells cultured *in vitro* and either:
-- **Treated with dexamethasone**, or  
-- **Untreated (control)**.
-
-This dataset is ideal for learning RNA-seq analysis because it is small, well-annotated, and publicly available.
-
----
-
-## 🧩 Workflow Overview
-1. **Load and filter** the RNA-seq count data.  
-2. **Normalize** and **transform** counts (variance stabilizing transformation).  
-3. Perform **PCA** to explore sample relationships.  
-4. Run **DESeq2** to find differentially expressed genes.  
-5. Create **visualizations**:
-   - PCA plot  
-   - MA plot  
-   - Volcano plot  
-   - Heatmap of top DE genes  
-6. **Annotate** genes with symbols using `org.Hs.eg.db`.  
-7. Export **tables and figures** for downstream interpretation.
-
----
-
-## 🧰 Tools and Libraries
-- **R / Bioconductor**  
-  - `DESeq2`, `airway`, `apeglm`, `SummarizedExperiment`  
-  - `tidyverse`, `ggplot2`, `pheatmap`  
-  - `AnnotationDbi`, `org.Hs.eg.db`  
-- **Reproducibility**  
-  - `renv` for environment management  
-  - `Quarto` or `R Markdown` for reports  
-
----
-
-
->>>>>>> ba62e029fd628d39050b987a3b5b9f704e94228e
