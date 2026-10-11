@@ -82,8 +82,8 @@ Quarto / R Markdown for literate analysis
 ├── data/
 │   └── raw/                # Input count data
 ├── Results/
-│   ├── tables/             # CSV with DEGs
-│   └── figures/            # PCA, volcano, heatmap
+│   ├── Tables/             # CSV with DEGs
+│   └── Figures/            # PCA, volcano, heatmap
 ├── Scripts/
 │   ├── 01_preprocessing.R
 │   ├── 02_deseq2_analysis.R
@@ -128,9 +128,9 @@ source("Scripts/03_visualization.R")
 
 Under Results/:
 
-Results/tables/deseq2_results.csv → full DESeq2 results
+Results/Tables/deseq2_results.csv → full DESeq2 results
 
-Results/figures/ → all plots as .png
+Results/Figures/ → all plots as .png
 
 🚀 Future Extensions
 
