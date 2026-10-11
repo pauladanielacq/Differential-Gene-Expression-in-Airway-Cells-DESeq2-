@@ -5,19 +5,19 @@ The goal is to identify genes whose expression changes significantly when human 
 
 🎯 Objectives
 
--Explore transcriptional changes induced by dexamethasone treatment.
+- Explore transcriptional changes induced by dexamethasone treatment.
 
--Apply a reproducible RNA-seq analysis workflow using DESeq2.
+- Apply a reproducible RNA-seq analysis workflow using DESeq2.
 
--Produce publication-grade visualizations:
+- Produce publication-grade visualizations:
 
--PCA
+- PCA
 
--Volcano plot
+- Volcano plot
 
--Heatmap
+- Heatmap
 
--Demonstrate skills in RNA-seq statistics, visualization and interpretation.
+- Demonstrate skills in RNA-seq statistics, visualization and interpretation.
 
 📚 Dataset
 
@@ -25,9 +25,9 @@ The analysis uses the airway dataset from Bioconductor.
 
 It contains RNA-seq read counts from primary human airway smooth muscle cells, cultured under two conditions:
 
--Control (No dexamethasone)
+- Control (No dexamethasone)
 
--Dexamethasone-treated
+- Dexamethasone-treated
 
 This dataset is widely used for education and benchmarking: small, well-annotated, and fully reproducible.
 
@@ -69,18 +69,11 @@ Biological interpretation:
 
 - AnnotationDbi, org.Hs.eg.db
 
-Reproducibility
-
-renv for environment management
-
-Quarto / R Markdown for literate analysis
-
 📂 Repository Structure
 
 
 
-├── data/
-│   └── raw/                # Input count data
+Data: loaded directly from the airway Bioconductor package
 ├── Results/
 │   ├── Tables/             # CSV with DEGs
 │   └── Figures/            # PCA, volcano, heatmap
