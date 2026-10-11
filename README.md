@@ -141,7 +141,7 @@ Possible improvements:
 
 
 🙌 Credits
-Dataset: Himes et al., Bioconductro airway package
+Dataset: Himes et al., Bioconductor airway package
 Analysis: Paula Cano Quintero
 
 
