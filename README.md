@@ -1,7 +1,7 @@
 RNA-seq Differential Expression Analysis — Airway × Dexamethasone
 
 This project performs a small-scale RNA-seq differential expression analysis using the public airway dataset from Bioconductor.
-The goal is to identify genes whose expression changes significantly when human airway epithelial cells are treated with dexamethasone, a synthetic glucocorticoid commonly used for its anti-inflammatory effects in asthma and chronic respiratory diseases.
+The goal is to identify genes whose expression changes significantly when human airway smooth muscle cells are treated with dexamethasone, a synthetic glucocorticoid commonly used for its anti-inflammatory effects in asthma and chronic respiratory diseases.
 
 🎯 Objectives
 
