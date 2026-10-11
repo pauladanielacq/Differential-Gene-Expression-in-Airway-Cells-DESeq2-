@@ -81,10 +81,10 @@ Quarto / R Markdown for literate analysis
 
 ├── data/
 │   └── raw/                # Input count data
-├── results/
+├── Results/
 │   ├── tables/             # CSV with DEGs
 │   └── figures/            # PCA, volcano, heatmap
-├── scripts/
+├── Scripts/
 │   ├── 01_preprocessing.R
 │   ├── 02_deseq2_analysis.R
 │   └── 03_visualization.R
@@ -92,7 +92,7 @@ Quarto / R Markdown for literate analysis
 
 📊 Visualizations Generated
 
-Figures are saved under results/figures/:
+Figures are saved under Results/Figures/:
 
 - pca.png → sample clustering by treatment
 
@@ -118,19 +118,19 @@ install.packages(c("tidyverse", "ggplot2", "pheatmap"))
 BiocManager::install(c("DESeq2", "airway", "apeglm", "org.Hs.eg.db"))
 
 
-Run scripts:
+Run Scripts:
 
-source("scripts/01_preprocessing.R")
-source("scripts/02_deseq2_analysis.R")
-source("scripts/03_visualization.R")
+source("Scripts/01_preprocessing.R")
+source("Scripts/02_deseq2_analysis.R")
+source("Scripts/03_visualization.R")
 
 📁 Output Files
 
-Under results/:
+Under Results/:
 
-results/tables/deseq2_results.csv → full DESeq2 results
+Results/tables/deseq2_results.csv → full DESeq2 results
 
-results/figures/ → all plots as .png
+Results/figures/ → all plots as .png
 
 🚀 Future Extensions
 
@@ -148,8 +148,7 @@ Possible improvements:
 
 
 🙌 Credits
-
-Dataset: Himes et al., Bioconductor airway package
+Dataset: Himes et al., Bioconductro airway package
 Analysis: Paula Cano Quintero
-=======
+
 
